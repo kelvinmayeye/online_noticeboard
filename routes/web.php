@@ -21,3 +21,7 @@ Route::post('register',[UsersController::class,'addStudent']);
 
 Route::post('register_staff',[USersController::class,'addStaff']);
 
+Route::post('dashboard',[USersController::class,'login']);
+
+Route::get('home',[UsersController::class,'home']);
+

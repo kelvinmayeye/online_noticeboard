@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
@@ -43,7 +44,7 @@ class UsersController extends Controller
         if($c_pass == $request->password){
         $staff->reg_number=$request->reg_number;
         $staff->name=$request->fullname;
-        $staff->password=$request->password;
+        $staff->password=bcrypt($request->password);
         $staff->gender=$request->gender;
         $staff->email=$request->email;
         $staff->phone_number=$request->phone_no;
@@ -52,13 +53,40 @@ class UsersController extends Controller
         $staff->role=$role;
 
         $staff->save(); 
-        Session::flash("success","succefully submitted,please for verification from admin");  
+        Session::flash("alert","succefully submitted,please for verification from admin");  
         }else{
             Session::flash("fail","Sorry password didnt match");
         }    
         
         return redirect("/");
 
+    }
+
+    public function login(Request $request){
+        
+
+        $this->validate($request,[
+            "reg_number"=>"required",
+            "password"=>"required"
+        ]);
+
+        $credentials = [
+            "reg_number"=>$request->reg_number,
+            "password"=>$request->password
+        ];
+
+        if(Auth::attempt($credentials)){
+
+            return redirect()->intended('home');
+        }
+
+        session::flash("fail","Reg number or password is not valid");
+        return back();
+
+    }
+
+    public function home(){
+        return view('dashboard.home');
     }
 }
 
