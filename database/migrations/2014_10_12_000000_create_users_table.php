@@ -24,7 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('sec_qn',90);
             $table->string('sec_answer',30);
             $table->string('role',30);
-            $table->string('status',14);
+            $table->string('status',14)->nullable();
             $table->timestamps();
         });
     }

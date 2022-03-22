@@ -112,7 +112,7 @@
                         <input type="email" class="form-control" name="email" placeholder="Email" value="" />
                     </div>
                     <div class="form-group">
-                        <input type="text" maxlength="10" minlength="10" class="form-control" placeholder="Phone " value="" />
+                        <input type="text" maxlength="10" minlength="10" class="form-control" name="phone_no" placeholder="Phone " value="" />
                     </div>
                     <div class="form-group">
                         <div class="maxl">
@@ -136,7 +136,18 @@
                         <input type="password" class="form-control" name="c_password" placeholder="Confirm Password *" value="" />
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" name="position" placeholder="Position" value="" />
+                        <input type="text" class="form-control" name="position" value="leader" disabled />
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" name="sec_qn">
+                            <option class="hidden"  selected disabled>Please select your Sequrity Question</option>
+                            <option>What is your Favorite Food?</option>
+                            <option>What is best day of the week?</option>
+                            <option>What is your Pet Name?</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="sec_answer" placeholder="Enter Your Answer"/>
                     </div>
                         <input type="submit" class="btnRegister"  value="Register"/>
                         </div>

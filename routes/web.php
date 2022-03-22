@@ -2,8 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontEndController;
-use App\Http\Controllers\StudentController;
-use App\Http\Controllers\StaffController;
+use App\Http\Controllers\UsersController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,7 +17,7 @@ use App\Http\Controllers\StaffController;
 Route::get('/',[FrontEndController::class,'index']);
 Route::get('login',[FrontEndController::class,'getLogin']);
 
-Route::post('register',[StudentController::class,'addStudent']);
+Route::post('register',[UsersController::class,'addStudent']);
 
-Route::post('register_staff',[StaffController::class,'addStaff']);
+Route::post('register_staff',[USersController::class,'addStaff']);
 
