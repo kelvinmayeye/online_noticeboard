@@ -33,14 +33,14 @@
     <div class="col-md-9 register-right">
         <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Student</a>
+                <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Student</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Staff</a>
+                <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Staff</a>
             </li>
         </ul>
     <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="tab-pane fade show" id="home" role="tabpanel" aria-labelledby="home-tab">
             <form action="{{url('register')}}" method="POST">
                 @csrf
             <h3 class="register-heading">Student Registration Form</h3>
@@ -96,46 +96,54 @@
             </div>
             </form>
         </div>
-        <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-            <h3  class="register-heading">Apply as a Hirer</h3>
+        <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <form action="{{url('register_staff')}}" method="POST">
+                @csrf
+            <h3  class="register-heading">Staffs Registration</h3>
             <div class="row register-form">
                 <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="First Name *" value="" />
+                <div class="form-group">
+                        <input type="text" class="form-control" name="reg_number" placeholder="Registration Number" />
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Last Name *" value="" />
+                        <input type="text" class="form-control" name="fullname" placeholder="Fullname" value="" />
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Email *" value="" />
+                        <input type="email" class="form-control" name="email" placeholder="Email" value="" />
                     </div>
                     <div class="form-group">
-                        <input type="text" maxlength="10" minlength="10" class="form-control" placeholder="Phone *" value="" />
+                        <input type="text" maxlength="10" minlength="10" class="form-control" placeholder="Phone " value="" />
+                    </div>
+                    <div class="form-group">
+                        <div class="maxl">
+                            <label class="radio inline"> 
+                                <input type="radio" name="gender" value="male" checked>
+                                <span> Male </span> 
+                            </label>
+                            <label class="radio inline"> 
+                                <input type="radio" name="gender" value="female">
+                                <span>Female </span> 
+                            </label>
+                            
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Password *" value="" />
+                        <input type="password" class="form-control" name="password" placeholder="Password *" value="" />
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Confirm Password *" value="" />
+                        <input type="password" class="form-control" name="c_password" placeholder="Confirm Password *" value="" />
                     </div>
                     <div class="form-group">
-                        <select class="form-control">
-                            <option class="hidden"  selected disabled>Please select your Sequrity Question</option>
-                            <option>What is your Birthdate?</option>
-                            <option>What is Your old Phone Number</option>
-                            <option>What is your Pet Name?</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="`Answer *" value="" />
+                        <input type="text" class="form-control" name="position" placeholder="Position" value="" />
                     </div>
                         <input type="submit" class="btnRegister"  value="Register"/>
                         </div>
                     </div>
                 </div>
             </div>
+            </form>
         </div>
     </div>
 </div>
