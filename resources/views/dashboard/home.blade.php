@@ -1,17 +1,110 @@
 @extends('dashboard.sample')
 @section('content')
-            <div class=""></div>
+<div class="row">
+        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+          <div class="card">
+            <div class="card-body p-3">
+              <div class="row">
+                <div class="col-8">
+                  <div class="numbers">
+                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Today's Posts</p>
+                    <h5 class="font-weight-bolder">
+                      10
+                    </h5>
+                    <!-- <p class="mb-0">
+                      <span class="text-success font-weight-bolder">+3%</span>
+                      since last week
+                    </p> -->
+                  </div>
+                </div>
+                <div class="col-4 text-end">
+                  <div class="righticon text-center rounded-circle">
+                    <i class="fas fa-upload" aria-hidden="true" style="top: 13px;position: relative;"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-            <h2>Lorem Ipsum Dolor</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+          <div class="card">
+            <div class="card-body p-3">
+              <div class="row">
+                <div class="col-8">
+                  <div class="numbers">
+                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Sent Emails</p>
+                    <h5 class="font-weight-bolder">
+                      2,300
+                    </h5>
+                    <!-- <p class="mb-0">
+                      <span class="text-success text-sm font-weight-bolder">+3%</span>
+                      since last week
+                    </p> -->
+                  </div>
+                </div>
+                <div class="col-4 text-end">
+                  <div class="righticon text-center rounded-circle">
+                    <i class="fas fa-envelope-square" aria-hidden="true" style="top: 13px;position: relative;"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-            <div class="line"></div>
+        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+          <div class="card">
+            <div class="card-body p-3">
+              <div class="row">
+                <div class="col-8">
+                  <div class="numbers">
+                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Sent sms</p>
+                    <h5 class="font-weight-bolder">
+                      2,300
+                    </h5>
+                    <!-- <p class="mb-0">
+                      <span class="text-success text-sm font-weight-bolder">+3%</span>
+                      since last week
+                    </p> -->
+                  </div>
+                </div>
+                <div class="col-4 text-end">
+                  <div class="righticon text-center rounded-circle">
+                    <i class="fas fa-mobile" aria-hidden="true" style="top: 13px;position: relative;"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-            <h2>Lorem Ipsum Dolor</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+          <div class="card">
+            <div class="card-body p-3">
+              <div class="row">
+                <div class="col-8">
+                  <div class="numbers">
+                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Failed Mails</p>
+                    <h5 class="font-weight-bolder">
+                      24
+                    </h5>
+                    <!-- <p class="mb-0">
+                      <span class="text-success text-sm font-weight-bolder">+3%</span>
+                      since last week
+                    </p> -->
+                  </div>
+                </div>
+                <div class="col-4 text-end">
+                  <div class="righticon text-center rounded-circle">
+                    <i class="fas fa-comment-slash" aria-hidden="true" style="top: 13px;position: relative;"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-            <div class="line"></div>
-
-            <h3>Lorem Ipsum Dolor</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        
+</div>
 @stop

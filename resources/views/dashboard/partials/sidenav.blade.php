@@ -5,41 +5,44 @@
 
             <ul class="list-unstyled components">
                 <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Leaders</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
-                            <a href="#">Home 1</a>
+                            <a href="#">All leaders</a>
                         </li>
                         <li>
-                            <a href="#">Home 2</a>
+                            <a href="#">Pending request</a>
                         </li>
                         <li>
-                            <a href="#">Home 3</a>
+                            <a href="#">Denied request</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">About</a>
+                    <a href="#">Posts</a>
                 </li>
                 <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Students</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>
-                            <a href="#">Page 1</a>
+                            <a href="#">Current Students</a>
                         </li>
                         <li>
-                            <a href="#">Page 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 3</a>
+                            <a href="#">Finished students</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">Portfolio</a>
+                    <a href="#">Emails</a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="#">SMS</a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled about">
+                <li>
+                    <a href="" class="aboutbtn" data-toggle="modal" data-target="#exampleModalLong">About</a>
                 </li>
             </ul>
         </nav>

@@ -75,7 +75,6 @@ a:focus {
 
 #sidebar ul.components {
     padding: 20px 0;
-    border-bottom: 1px solid #0062cc;
 }
 
 #sidebar ul p {
@@ -129,6 +128,23 @@ ul ul a {
     transition: all 0.3s;
 }
 
+ul.about {
+    padding: 20px;
+}
+
+ul.about a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.aboutbtn {
+    background: #fff;
+    color: #7386D5;
+}
+
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
@@ -143,4 +159,19 @@ ul ul a {
     #sidebarCollapse span {
         display: none;
     }
+}
+
+/*----------------------------------------------------------
+    CARDS ON THE MAIN BODYY
+------------------------------------------------------------*/   
+
+.card {
+    border-radius: 1rem;
+}
+.righticon{
+    background-color: #0062cc;
+    width: 48px;
+    height: 48px;
+    background-position: center;
+    color: #fff;
 }
