@@ -25,5 +25,10 @@ Route::post('dashboard',[USersController::class,'login']);
 
 Route::get('home',[UsersController::class,'home']);
 
-Route::get('all_leaders',[UsersController::class,'getleaders']);
+Route::get('all_leaders',[UsersController::class,'getLeaders']);
 
+Route::get('pending_leaders',[UsersController::class,'getPendingLeaders']);
+
+Route::get('denied_leaders',[UsersController::class,'getDeniedLeaders']);
+
+Route::get('current_students',[UsersController::class,'getCurrentStudent']);

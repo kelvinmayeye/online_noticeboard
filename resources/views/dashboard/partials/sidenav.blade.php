@@ -14,10 +14,10 @@
                             <a href="{{url('all_leaders')}}">All leaders</a>
                         </li>
                         <li>
-                            <a href="#">Pending request</a>
+                            <a href="{{url('pending_leaders')}}">Pending request</a>
                         </li>
                         <li>
-                            <a href="#">Denied request</a>
+                            <a href="{{url('denied_leaders')}}">Denied request</a>
                         </li>
                     </ul>
                 </li>
@@ -28,7 +28,7 @@
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Students</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>
-                            <a href="#">Current Students</a>
+                            <a href="{{url('current_students')}}">Current Students</a>
                         </li>
                         <li>
                             <a href="#">Finished students</a>
