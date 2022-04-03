@@ -50,6 +50,17 @@ a:focus {
     SIDEBAR STYLE
 ----------------------------------------------------- */
 
+
+#sidebar img{
+    margin-top: 15%;
+        margin-bottom: 5%;
+    vertical-align: middle;
+    /* border-style: none; */
+    width: 70px;
+    animation: mover 1s infinite alternate;
+    -webkit-animation: mover 2s infinite alternate;
+
+}
 .wrapper {
     display: flex;
     width: 100%;

@@ -25,3 +25,5 @@ Route::post('dashboard',[USersController::class,'login']);
 
 Route::get('home',[UsersController::class,'home']);
 
+Route::get('all_leaders',[UsersController::class,'getleaders']);
+

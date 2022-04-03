@@ -88,5 +88,17 @@ class UsersController extends Controller
     public function home(){
         return view('dashboard.home');
     }
+
+
+    //get all leaders
+    public function getleaders(){
+        $leader = User::whereIn('role',['leader','student']);
+
+       // dd($leader);
+
+        //return compact("leader");
+        return view('dashboard.all_leaders',compact("leader"));
+    }
+
 }
 

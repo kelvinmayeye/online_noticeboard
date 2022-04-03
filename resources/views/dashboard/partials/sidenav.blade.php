@@ -1,5 +1,8 @@
 <nav id="sidebar">
             <div class="sidebar-header">
+                <div class="logo-image">
+                <img src="{{url('img/noti_png.png')}}" alt=""/>
+                </div>
                 <h3>Online Notice Board</h3>
             </div>
 
@@ -8,7 +11,7 @@
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Leaders</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
-                            <a href="#">All leaders</a>
+                            <a href="{{url('all_leaders')}}">All leaders</a>
                         </li>
                         <li>
                             <a href="#">Pending request</a>
