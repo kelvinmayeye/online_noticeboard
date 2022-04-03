@@ -92,16 +92,16 @@ class UsersController extends Controller
 
     //get all leaders
     public function getLeaders(){
-        $leader = User::whereIn('role',['leader','student']);
-
-       // dd($leader);
-
-        //return compact("leader");
+        $leader = User::whereIn('role',['leader']);
         return view('dashboard.leaders.all_leaders',compact("leader"));
     }
 
     public function getPendingLeaders(){
         $leader = User::whereIn('role',['leader','student']);
+
+        // dd($leader);
+
+        //return compact("leader");
         return view('dashboard.leaders.leader_pending',compact('leader'));
     }
 
