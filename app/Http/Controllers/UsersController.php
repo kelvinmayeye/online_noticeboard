@@ -92,16 +92,12 @@ class UsersController extends Controller
 
     //get all leaders
     public function getLeaders(){
-        $leader = User::whereIn('role',['leader']);
+         $leader = User::whereIn('role',['leader'])->get();
         return view('dashboard.leaders.all_leaders',compact("leader"));
     }
 
     public function getPendingLeaders(){
-        $leader = User::whereIn('role',['leader','student']);
-
-        // dd($leader);
-
-        //return compact("leader");
+        $leader = User::whereIn('status',['pending'])->get();
         return view('dashboard.leaders.leader_pending',compact('leader'));
     }
 
@@ -111,8 +107,18 @@ class UsersController extends Controller
     }
 
     public function getCurrentStudent(){
-        $leader = User::whereIn('role',['leader','student']);
-        return view('dashboard.students.currentstudent',compact('leader'));
+        $end_regnumber = date("y") -1;
+
+        $student = User::where('reg_number', 'LIKE', "%{$end_regnumber}")->get();
+        //$student = User::whereIn('role',['student'])->get();
+        return view('dashboard.students.currentstudent',compact('student'));
+    }
+
+    public function getfinishedstudent(){
+        $end_regnumber = date("y")-2;
+
+        $finstudent = User::where('reg_number','LIKE',"%{$end_regnumber}")->get();
+        return view('dashboard.students.finishedstudent',compact('finstudent'));
     }
 
 }

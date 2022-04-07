@@ -1,9 +1,10 @@
 @extends('dashboard.sample')
 @section('content')
 
+<
 <div class="row">
     <div class="col-xl-12 col-sm-12 mb-xl-12 mb-2">
-        <h2>All Current Students</h2>
+        <h2>All Current Students <?php echo date("y")-1; ?></h2>
     </div>
 </div>
 
@@ -23,14 +24,14 @@
                             </tr>
                         </thead>
                         <tbody>
-                        @foreach ($leader as $leader)
+                        @foreach ($student as $student)
                             <tr>
-                                <td>{{$leader->reg_number}}</td>
-                                <td>{{$leader->name}}</td>
-                                <td>{{$leader->gender}}</td>
-                                <td>{{$leader->email}}</td>
-                                <td>{{$leader->phone_number}}</td>
-                                <td class="">{{$leader->status}}</td>
+                                <td>{{$student->reg_number}}</td>
+                                <td>{{$student->name}}</td>
+                                <td>{{$student->gender}}</td>
+                                <td>{{$student->email}}</td>
+                                <td>{{$student->phone_number}}</td>
+                                <td class="">{{$student->status}}</td>
                             </tr>
                         @endforeach
                         </tbody>

@@ -13,11 +13,11 @@
                         <li>
                             <a href="{{url('all_leaders')}}">All leaders</a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="{{url('pending_leaders')}}">Pending request</a>
                         </li>
                         <li>
-                            <a href="{{url('denied_leaders')}}">Denied request</a>
+                            <a href="{{url('denied_leaders')}}">Denied request</a> -->
                         </li>
                     </ul>
                 </li>
@@ -31,7 +31,7 @@
                             <a href="{{url('current_students')}}">Current Students</a>
                         </li>
                         <li>
-                            <a href="#">Finished students</a>
+                            <a href="{{url('finished_student')}}">Finished students</a>
                         </li>
                     </ul>
                 </li>

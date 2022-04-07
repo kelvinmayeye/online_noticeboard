@@ -3,7 +3,7 @@
 
 <div class="row">
     <div class="col-xl-12 col-sm-12 mb-xl-12 mb-2">
-        <h2>All leaders</h2>
+        <h2>All Finished Students</h2>
     </div>
 </div>
 
@@ -19,22 +19,16 @@
                                 <th>Gender</th>
                                 <th>Email</th>
                                 <th>Phone number</th>
-                                <th>Status</th>
                             </tr>
                         </thead>
                         <tbody>
-                        @foreach ($leader as $leader)
+                        @foreach ($finstudent as $finstudent)
                             <tr>
-                                <td>{{$leader->reg_number}}</td>
-                                <td>{{$leader->name}}</td>
-                                <td>{{$leader->gender}}</td>
-                                <td>{{$leader->email}}</td>
-                                <td>{{$leader->phone_number}}</td>
-                                @if ($leader->status =='accepted')
-                                <td class="bg-info">{{$leader->status}}</td>
-                                @else
-                                <td>{{$leader->status}}</td>
-                                @endif  
+                                <td>{{$finstudent->reg_number}}</td>
+                                <td>{{$finstudent->name}}</td>
+                                <td>{{$finstudent->gender}}</td>
+                                <td>{{$finstudent->email}}</td>
+                                <td>{{$finstudent->phone_number}}</td>
                             </tr>
                         @endforeach
                         </tbody>

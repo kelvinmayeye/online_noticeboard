@@ -32,3 +32,5 @@ Route::get('pending_leaders',[UsersController::class,'getPendingLeaders']);
 Route::get('denied_leaders',[UsersController::class,'getDeniedLeaders']);
 
 Route::get('current_students',[UsersController::class,'getCurrentStudent']);
+
+Route::get('finished_student',[UsersController::class,'getfinishedstudent']);
