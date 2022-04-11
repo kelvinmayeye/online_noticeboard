@@ -34,3 +34,5 @@ Route::get('denied_leaders',[UsersController::class,'getDeniedLeaders']);
 Route::get('current_students',[UsersController::class,'getCurrentStudent']);
 
 Route::get('finished_student',[UsersController::class,'getfinishedstudent']);
+
+Route::get('add_posts',[UsersController::class,'getAddPost']);

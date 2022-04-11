@@ -22,7 +22,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">Posts</a>
+                <a href="{{url('add_posts')}}">Posts</a>
                 </li>
                 <li>
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Students</a>

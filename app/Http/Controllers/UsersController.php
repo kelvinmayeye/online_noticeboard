@@ -121,5 +121,9 @@ class UsersController extends Controller
         return view('dashboard.students.finishedstudent',compact('finstudent'));
     }
 
+    public function getAddPost(){
+        return view('dashboard.posts.addpost');
+    }
+
 }
 

@@ -15,6 +15,9 @@
     <!-- css style -->
     <link rel="stylesheet" href="{{url('css/style.css') }}">
 
+    <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="{{url('css/bootstrap3-wysihtml5.min.css')}}">
+
     <title>Online Notice-Board</title>
   </head>
   <body>
