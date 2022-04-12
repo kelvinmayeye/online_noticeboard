@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontEndController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\UsersController;
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +37,5 @@ Route::get('current_students',[UsersController::class,'getCurrentStudent']);
 Route::get('finished_student',[UsersController::class,'getfinishedstudent']);
 
 Route::get('add_posts',[UsersController::class,'getAddPost']);
+
+Route::get('addpost',[PostController::class,'storePost']);
