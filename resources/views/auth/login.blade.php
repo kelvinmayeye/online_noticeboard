@@ -9,16 +9,20 @@
         </button>
     </div>
     @endif
+
     <div class="row">
         <div class="col-md-3 register-left">
             <a href="{{url('/')}}"><img src="{{url('img/noti_png.png')}}" alt=""/></a>
             <h3>Welcome to online notice board</h3>
-            <p>Get instance notice to your mobile phone through your email and phone number</p>
-            <!-- <input type="submit" name="" value="Login"/><br/> -->
+            <p>Get instance notice to your mobile phone through your email and phone number
+                <br><a href="{{url('/')}}"> <input type="submit" value="Register"/> </a>
+            </p>
+            
         </div>
     <div class="col-md-9 register-right">
       <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            
             <form action="{{url('dashboard')}}" method="POST">
                 @csrf
             <h3 class="register-heading">Student Login</h3>
@@ -32,12 +36,10 @@
                         <input type="checkbox"  onclick="showPassword()">&nbsp;Show Password
                     </div>
                     <input type="submit" class="btnRegister" style="width: 35%;margin-top: 6%;" value="Login"/>
-                </div>
-                
-                    
-                
+                </div>   
             </div>
             </form>
+            
         </div>
     </div>
 </div>

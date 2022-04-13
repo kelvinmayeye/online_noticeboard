@@ -1,3 +1,4 @@
+<?php $page = "home"; ?>
 @extends('dashboard.sample')
 @section('content')
 <div class="row">

@@ -22,7 +22,7 @@
             <img src="{{url('img/noti_png.png')}}" alt=""/>
             <h3>Welcome to online notice board</h3>
             <p>Get instance notice to your mobile phone through your email and phone number</p>
-            <a href="{{url('login')}}"><input type="button" name="" value="Login"/></a><br/>
+            <a href="{{url('loginpage')}}"><input type="button" name="" value="Login"/></a><br/>
         </div>
     <div class="col-md-9 register-right">
         <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">

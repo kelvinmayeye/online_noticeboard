@@ -7,7 +7,8 @@
             </div>
 
             <ul class="list-unstyled components">
-                <li class="active">
+                <li <?php if($page=="home"){echo 'class="active"';}?>>
+                
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Leaders</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
@@ -21,10 +22,10 @@
                         </li>
                     </ul>
                 </li>
-                <li>
+                <li <?php if($page=="post"){echo 'class="active"';}?>>
                 <a href="{{url('add_posts')}}">Posts</a>
                 </li>
-                <li>
+                <li <?php if($page=="student"){echo 'class="active"';}?>>
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Students</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>

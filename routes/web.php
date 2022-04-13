@@ -16,13 +16,14 @@ use App\Http\Controllers\UsersController;
 */
 
 Route::get('/',[FrontEndController::class,'index']);
-Route::get('login',[FrontEndController::class,'getLogin']);
-
 Route::post('register',[UsersController::class,'addStudent']);
-
 Route::post('register_staff',[USersController::class,'addStaff']);
+Route::get('loginpage',[FrontEndController::class,'getLogin'])->name('login');
+Route::post('dashboard',[UsersController::class,'login']);
 
-Route::post('dashboard',[USersController::class,'login']);
+Route::middleware("auth")->group(function(){
+
+Route::get('logout',[UsersController::class,'logout']);
 
 Route::get('home',[UsersController::class,'home']);
 
@@ -38,4 +39,6 @@ Route::get('finished_student',[UsersController::class,'getfinishedstudent']);
 
 Route::get('add_posts',[UsersController::class,'getAddPost']);
 
-Route::get('addpost',[PostController::class,'storePost']);
+Route::post('addpost',[PostController::class,'storePost']);
+
+});

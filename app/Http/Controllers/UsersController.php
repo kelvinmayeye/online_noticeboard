@@ -18,7 +18,7 @@ class UsersController extends Controller
         if($c_pass == $request->password){
         $student->reg_number=$request->reg_number;
         $student->name=$request->fullname;
-        $student->password=$request->password;
+        $student->password=bcrypt($request->password);
         $student->gender=$request->gender;
         $student->email=$request->email;
         $student->phone_number=$request->phone_no;

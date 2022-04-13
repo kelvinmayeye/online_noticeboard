@@ -1,3 +1,4 @@
+<?php $page = "student"; ?>
 @extends('dashboard.sample')
 @section('content')
 
