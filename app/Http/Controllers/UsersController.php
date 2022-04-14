@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\User;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
@@ -10,8 +11,7 @@ class UsersController extends Controller
 {
     public function addStudent(Request $request){
 
-
-        $student = new User();//refering a modal class
+        $student = new User();
         $c_pass = $request->c_password;
         $role = "student";
 
@@ -37,7 +37,7 @@ class UsersController extends Controller
 
     public function addStaff(Request $request){
 
-        $staff = new User();//refering a modal class
+        $staff = new User();
         $c_pass = $request->c_password;
         $role = "leader";
 
@@ -64,7 +64,6 @@ class UsersController extends Controller
 
     public function login(Request $request){
         
-
         $this->validate($request,[
             "reg_number"=>"required",
             "password"=>"required"
@@ -76,8 +75,8 @@ class UsersController extends Controller
         ];
 
         if(Auth::attempt($credentials)){
-
-            return redirect()->intended('home');
+            
+            return redirect('home');
         }
 
         session::flash("fail","Reg number or password is not valid");

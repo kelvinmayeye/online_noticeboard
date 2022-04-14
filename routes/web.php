@@ -20,25 +20,16 @@ Route::post('register',[UsersController::class,'addStudent']);
 Route::post('register_staff',[USersController::class,'addStaff']);
 Route::get('loginpage',[FrontEndController::class,'getLogin'])->name('login');
 Route::post('dashboard',[UsersController::class,'login']);
-
-Route::middleware("auth")->group(function(){
-
 Route::get('logout',[UsersController::class,'logout']);
 
+
+Route::middleware("auth")->group(function(){
 Route::get('home',[UsersController::class,'home']);
-
 Route::get('all_leaders',[UsersController::class,'getLeaders']);
-
 Route::get('pending_leaders',[UsersController::class,'getPendingLeaders']);
-
 Route::get('denied_leaders',[UsersController::class,'getDeniedLeaders']);
-
 Route::get('current_students',[UsersController::class,'getCurrentStudent']);
-
 Route::get('finished_student',[UsersController::class,'getfinishedstudent']);
-
 Route::get('add_posts',[UsersController::class,'getAddPost']);
-
 Route::post('addpost',[PostController::class,'storePost']);
-
 });
