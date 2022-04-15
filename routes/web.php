@@ -20,7 +20,6 @@ Route::post('register',[UsersController::class,'addStudent']);
 Route::post('register_staff',[USersController::class,'addStaff']);
 Route::get('loginpage',[FrontEndController::class,'getLogin'])->name('login');
 Route::post('dashboard',[UsersController::class,'login']);
-Route::get('logout',[UsersController::class,'logout']);
 
 
 Route::middleware("auth")->group(function(){
@@ -32,4 +31,5 @@ Route::get('current_students',[UsersController::class,'getCurrentStudent']);
 Route::get('finished_student',[UsersController::class,'getfinishedstudent']);
 Route::get('add_posts',[UsersController::class,'getAddPost']);
 Route::post('addpost',[PostController::class,'storePost']);
+Route::post('logout',[UsersController::class,'logout'])->name('logout');
 });

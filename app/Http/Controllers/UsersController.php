@@ -124,5 +124,12 @@ class UsersController extends Controller
         return view('dashboard.posts.addpost');
     }
 
+    public function logout(Request $request){
+        auth()->logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect("loginpage");
+    }
+
 }
 
