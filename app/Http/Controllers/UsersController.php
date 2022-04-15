@@ -76,7 +76,12 @@ class UsersController extends Controller
 
         if(Auth::attempt($credentials)){
             
-            return redirect('home');
+            if(Auth::user()->role=='leader'){
+                return redirect('home');
+            }else{
+                return redirect('current_students');
+            }
+            
         }
 
         session::flash("fail","Reg number or password is not valid");
