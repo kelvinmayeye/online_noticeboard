@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\sendMailController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,7 +30,10 @@ Route::get('pending_leaders',[UsersController::class,'getPendingLeaders']);
 Route::get('denied_leaders',[UsersController::class,'getDeniedLeaders']);
 Route::get('current_students',[UsersController::class,'getCurrentStudent']);
 Route::get('finished_student',[UsersController::class,'getfinishedstudent']);
-Route::get('add_posts',[UsersController::class,'getAddPost']);
+
+Route::get('add_posts',[PostController::class,'getAddPost']);
 Route::post('addpost',[PostController::class,'storePost']);
+
 Route::post('logout',[UsersController::class,'logout'])->name('logout');
+Route::post('send',[SendMailController::class,'sendNotification']);
 });
