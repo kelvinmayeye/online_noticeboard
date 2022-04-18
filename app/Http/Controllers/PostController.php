@@ -21,8 +21,8 @@ class PostController extends Controller
             'greeting'=>$request->title,
             'body'=>$request->messege,
             'actiontext'=>'Subscribe this channel',
-            'actionurl'=>'/',
-            'lastline'=>'bye this is the last line'
+           // 'actionurl'=>'/',
+            'lastline'=>$request->postername,
         ];
         Notification::send($user,new SendEmailNotification($details));
 
@@ -36,5 +36,10 @@ class PostController extends Controller
 
         Session::flash("success","Successfully sent mails");
         return redirect("add_posts");
+    }
+
+    public function showPost(){
+        $post=Post::all();
+        return view('dashboard.posts.allpost',compact('post'));
     }
 }

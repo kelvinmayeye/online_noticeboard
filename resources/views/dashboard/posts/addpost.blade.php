@@ -22,6 +22,7 @@
 
 <form action="{{url('addpost')}}" method="POST">
   @csrf
+  <input type="hidden"  name="postername" value="{{Auth::user()->name}}">
   <div class="row">
     <div class="col-xl-12 col-sm-12 mb-xl-12 mb-2">
         <h2>Add New Post Here</h2>
@@ -53,12 +54,8 @@
               <!-- /. tools -->
             </div>
             <!-- /.box-header -->
-            <div class="box-body pad">
-              <form>
-                    <textarea id="editor1" name="messege" rows="10" cols="80">
-                                            This is my textarea to be replaced with CKEditor.
-                    </textarea>
-              </form>
+            <div class="form-group">
+              <textarea class="form-control" name="messege" rows="7"></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-sm mt-2">Add</button>
           </div>
@@ -71,23 +68,6 @@
       <!-- ./row -->
 
 </form>
-
-
-      <!-- jQuery 3 -->
-      <script src="{{url('js_scripts/jquery.min.js')}}"></script>
-
-      <!-- CK Editor -->
-      <script src="{{url('js_scripts/ckeditor/ckeditor.js')}}"></script>
-
-      <script>
-        $(function () {
-          // Replace the <textarea id="editor1"> with a CKEditor
-          // instance, using default configuration.
-          CKEDITOR.replace('messege')
-          //bootstrap WYSIHTML5 - text editor
-          $('.textarea').wysihtml5()
-        })
-      </script>
 
 
 @stop

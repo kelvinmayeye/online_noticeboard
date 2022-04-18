@@ -34,7 +34,7 @@
                         </li>
                         @endif
                         <li>
-                            <a href="">All Posts</a>
+                            <a href="{{url('allpost/show')}}">All Posts</a>
                         </li>
                         <!-- <li>
                             <a href="{{url('denied_leaders')}}">Denied request</a> -->

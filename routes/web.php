@@ -33,6 +33,7 @@ Route::get('finished_student',[UsersController::class,'getfinishedstudent']);
 
 Route::get('add_posts',[PostController::class,'getAddPost']);
 Route::post('addpost',[PostController::class,'storePost']);
+Route::get('allpost/show',[PostController::class,'showPost']);
 
 Route::post('logout',[UsersController::class,'logout'])->name('logout');
 Route::post('send',[SendMailController::class,'sendNotification']);
