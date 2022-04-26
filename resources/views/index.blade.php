@@ -41,16 +41,16 @@
             <div class="row register-form">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <input type="text" class="form-control" name="reg_number" placeholder="Registration Number" />
+                        <input type="text" class="form-control" name="reg_number" placeholder="Registration Number" required/>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" name="fullname" placeholder="Full Name"  />
+                        <input type="text" class="form-control" name="fullname" placeholder="Full Name"  required/>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" name="password" placeholder="Password" id="myInput" />
+                        <input type="password" class="form-control" name="password" placeholder="Password" id="myInput" required />
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" name="c_password"  placeholder="Confirm Password" />
+                        <input type="password" class="form-control" name="c_password"  placeholder="Confirm Password" required/>
                     </div>
                     <div class="form-group">
                         <div class="maxl">
@@ -69,10 +69,10 @@
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <input type="email" class="form-control" name="email" placeholder="Your Email" />
+                        <input type="email" class="form-control" name="email" placeholder="Your Email" required/>
                     </div>
                     <div class="form-group">
-                        <input type="text" minlength="10" maxlength="10" name="phone_no" class="form-control" placeholder="Your Phone"/>
+                        <input type="text" minlength="10" maxlength="10" name="phone_no" class="form-control" placeholder="Your Phone" required/>
                     </div>
                     <div class="form-group">
                         <select class="form-control" name="sec_qn">
@@ -97,13 +97,13 @@
             <div class="row register-form">
                 <div class="col-md-6">
                 <div class="form-group">
-                        <input type="text" class="form-control" name="reg_number" placeholder="Registration Number" />
+                        <input type="text" class="form-control" name="reg_number" placeholder="Registration Number" required/>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" name="fullname" placeholder="Fullname" value="" />
+                        <input type="text" class="form-control" name="fullname" placeholder="Fullname" value="" required/>
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control" name="email" placeholder="Email" value="" />
+                        <input type="email" class="form-control" name="email" placeholder="Email" value="" required/>
                     </div>
                     <div class="form-group">
                         <input type="text" maxlength="10" minlength="10" class="form-control" name="phone_no" placeholder="Phone " value="" />
@@ -124,10 +124,10 @@
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <input type="password" class="form-control" name="password" placeholder="Password *" value="" />
+                        <input type="password" class="form-control" name="password" placeholder="Password *" value="" required/>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" name="c_password" placeholder="Confirm Password *" value="" />
+                        <input type="password" class="form-control" name="c_password" placeholder="Confirm Password *" value="" required/>
                     </div>
                     <div class="form-group">
                         <input type="text" class="form-control" name="position" value="leader" disabled />

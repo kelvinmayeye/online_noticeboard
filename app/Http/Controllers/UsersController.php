@@ -40,6 +40,7 @@ class UsersController extends Controller
         $staff = new User();
         $c_pass = $request->c_password;
         $role = "leader";
+        $status = "requesting";
 
         if($c_pass == $request->password){
         $staff->reg_number=$request->reg_number;
@@ -51,6 +52,7 @@ class UsersController extends Controller
         $staff->sec_qn=$request->sec_qn;
         $staff->sec_answer=$request->sec_answer;
         $staff->role=$role;
+        $staff->status=$status;
 
         $staff->save(); 
         Session::flash("alert","succefully submitted,please for verification from admin");  
@@ -77,6 +79,8 @@ class UsersController extends Controller
         if(Auth::attempt($credentials)){
             
             if(Auth::user()->role=='leader'){
+                return redirect('allpost/show');
+            }elseif(Auth::user()->role=='admin'){
                 return redirect('home');
             }else{
                 return redirect('current_students');

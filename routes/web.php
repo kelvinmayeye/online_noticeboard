@@ -17,7 +17,9 @@ use App\Http\Controllers\sendMailController;
 */
 
 Route::get('/',[FrontEndController::class,'index']);
+
 Route::get('index2',[FrontEndController::class,'getindex']);
+
 Route::post('register',[UsersController::class,'addStudent']);
 Route::post('register_staff',[USersController::class,'addStaff']);
 Route::get('loginpage',[FrontEndController::class,'getLogin'])->name('login');

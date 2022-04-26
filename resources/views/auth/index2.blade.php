@@ -49,8 +49,8 @@ label{
    position: fixed;
    left: 0;
    bottom: 0;
+   padding: 16px;
    width: 100%;
-   background-color: red;
    color: white;
    text-align: center;
 }
@@ -91,13 +91,16 @@ label{
                       </div>
                                   
                     <input type="submit" value="Login"><br />
-                    <label for="">Do you have an account? <a href="" >Register</a></label>
+                    <label for="">Do you have an account? <a href="{{url('/')}}" >Register</a></label>
                   </form>
             </div>
         </div>
 
     </div>
 
+    <div class="footer bg-primary">
+      <p>Copyright © 2022. All rights reserved.</p>
+    </div>
   
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -7,7 +7,7 @@
             </div>
 
             <ul class="list-unstyled components">
-                @if(Auth::user()->role=="leader")
+                @if(Auth::user()->role=="admin")
                 <li <?php if($page=="home"){echo 'class="active"';}?>>
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Leaders</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
@@ -25,7 +25,7 @@
                 @endif
 
                 
-                <li <?php if($page=="post"){echo 'class="active"';}?>>
+                <li <?php if($page=="kdkd"){echo 'class="active"';}?>>
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Post</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         @if(Auth::user()->role=="leader")
