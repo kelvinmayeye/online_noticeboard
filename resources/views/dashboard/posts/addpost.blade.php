@@ -25,7 +25,7 @@
   <input type="hidden"  name="postername" value="{{Auth::user()->name}}">
   <div class="row">
     <div class="col-xl-12 col-sm-12 mb-xl-12 mb-2">
-        <h2>Add New Post Here</h2>
+        <h2>Add New Post Here </h2>
     </div>
   </div>
 
@@ -38,7 +38,7 @@
                     </div>
                     <input type="text" name="title" class="form-control">
                   </div>
-                
+
             </div>
         </div>
     </div>
@@ -48,7 +48,7 @@
         <div class="col-md-12">
           <div class="box box-info">
             <div class="box-header">
-              <h3 class="box-title">Write 
+              <h3 class="box-title">Write
                 <small>Your Post here</small>
               </h3>
               <!-- /. tools -->
@@ -61,7 +61,7 @@
           </div>
           <!-- /.box -->
 
-          
+
         </div>
         <!-- /.col-->
       </div>

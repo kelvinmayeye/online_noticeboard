@@ -32,6 +32,7 @@ class PostController extends Controller
         $post = new Post();
         $post->title=$request->title;
         $post->messege=$request->messege;
+        $post->post_by=$request->postername;
         $post->save();
 
         Session::flash("success","Successfully sent mails");
